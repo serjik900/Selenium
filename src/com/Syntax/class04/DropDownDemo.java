@@ -6,12 +6,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
+
 public class DropDownDemo {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         //goto fb.com
-        driver.get("http://syntaxprojects.com/basic-checkbox-demo.php");
+        driver.get("http://syntaxprojects.com/basic-select-dropdown-demo.php");
         driver.manage().window().maximize();
 WebElement dropDown = driver.findElement(By.
 
@@ -25,7 +27,18 @@ Select select=new Select(dropDown);
 
         Thread.sleep(3000);
         //select by value
-        select.selectByValue();
+        select.selectByValue("Monday");
 
+        //get all options avaliable in the dropdown
+        List<WebElement> options=select.getOptions();
+for(int i=0; i<options.size();i++){
+    WebElement option=options.get(i);
+    System.out.println(option.getText());
+    String text=option.getText();
+    if(text.equalsIgnoreCase("Friday")){
+
+        select.selectByIndex(i);
+    }
+}
 
     }}
