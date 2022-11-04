@@ -51,6 +51,13 @@ public class MultipleSelectDropDown {
         Thread.sleep(1000);
 
         sel.deselectAll();
+
+
+
+        //How to check ifdrop down is multiple
+
+        boolean multiSelect=sel.isMultiple();
+        System.out.println(multiSelect);
             }
         }
 
