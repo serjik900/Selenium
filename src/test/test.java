@@ -1,18 +1,33 @@
 package test;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Scanner;
 
 public class test {
-    public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.get("http://google.com");
-        String title = driver.getTitle();
-        System.out.println(title);
-        driver.navigate().to("http://facebook.com");
+    public static void main(String[] args) {
+        ArrayList<Integer> ar = new ArrayList<>();
+        Scanner input = new Scanner(System.in);
+        for (int i = 0; i < 5; i++) {
+            ar.add(input.nextInt());
 
+        }
+        Iterator<Integer> iterate=ar.iterator();
+        while (iterate.hasNext()){
+            System.out.println(iterate.next());
+        }
 
+        System.out.println("**************************************");
+
+        LinkedList<Integer> list=new LinkedList<>();
+        for (int i=50;i<100;i++){
+            list.add(input.nextInt());
+        }
+        Iterator <Integer> iteration=list.iterator();
+        while(iteration.hasNext()){
+            System.out.println(iterate.next());
+        }
     }
-
 }
+
