@@ -6,28 +6,24 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 public class test {
-    public static void main(String[] args) {
-        ArrayList<Integer> ar = new ArrayList<>();
-        Scanner input = new Scanner(System.in);
-        for (int i = 0; i < 5; i++) {
-            ar.add(input.nextInt());
+    public static void main(String[]args){
+        LinkedList<Integer> num=new LinkedList<>();
+        num.add(111);
+        num.add(222);
+        num.add(333);
+        num.add(444);
+        num.add(555);
+        num.add(666);
+        int sum = 0;
+        for (int i=0;i< num.size();i++) {
+
+
+sum+=num.get(i);
+
 
         }
-        Iterator<Integer> iterate=ar.iterator();
-        while (iterate.hasNext()){
-            System.out.println(iterate.next());
-        }
+        System.out.println(sum);
 
-        System.out.println("**************************************");
-
-        LinkedList<Integer> list=new LinkedList<>();
-        for (int i=50;i<100;i++){
-            list.add(input.nextInt());
-        }
-        Iterator <Integer> iteration=list.iterator();
-        while(iteration.hasNext()){
-            System.out.println(iterate.next());
-        }
     }
 }
 
