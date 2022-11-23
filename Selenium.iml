@@ -95,5 +95,14 @@
         <jarDirectory url="file://$MODULE_DIR$/drivers/poi-bin-5.2.3/ooxml-lib" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/drivers/poi-bin-5.2.3/commons-io-2.6.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
